@@ -28,6 +28,15 @@
   color: #61dafb;
 }
 
+.title {
+  padding: .66rem 0;
+  text-align: center;
+  background-color: #cca353;
+  font-family: Poppins,sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
