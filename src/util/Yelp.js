@@ -12,11 +12,19 @@ const Yelp = {
     .then(jsonResponse => {
       if(jsonResponse.businesses) {
         console.log(jsonResponse.businesses)
-        jsonResponse.businesses.map(business => {
+        return jsonResponse.businesses.map(business => {
           return {
             id: business.id,
             imageSrc: business.image_url,
-          }
+            name: business.name,
+            adress: business.location.adress,
+            city: business.location.city,
+            state: business.location.state,
+            zipCode: business.location.zip_code,
+            category: business.categories[0].title,
+            rating: business.rating,
+            reviewCount: business.review_count
+          };
         })
       }
     })
